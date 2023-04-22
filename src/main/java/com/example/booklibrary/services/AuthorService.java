@@ -1,7 +1,7 @@
-package services;
+package com.example.booklibrary.services;
 
-import models.Author;
-import models.Country;
+import com.example.booklibrary.models.Author;
+import com.example.booklibrary.models.Country;
 
 import java.util.List;
 import java.util.Optional;

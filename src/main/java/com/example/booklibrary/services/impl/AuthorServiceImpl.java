@@ -1,10 +1,10 @@
-package services.impl;
+package com.example.booklibrary.services.impl;
 
-import models.Author;
-import models.Country;
+import com.example.booklibrary.repositories.AuthorRepository;
+import com.example.booklibrary.models.Author;
+import com.example.booklibrary.models.Country;
 import org.springframework.stereotype.Service;
-import repositories.AuthorRepository;
-import services.AuthorService;
+import com.example.booklibrary.services.AuthorService;
 
 import java.util.List;
 import java.util.Optional;

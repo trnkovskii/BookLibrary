@@ -1,9 +1,9 @@
-package services;
+package com.example.booklibrary.services;
 
-import models.Book;
-import models.dto.BookDto;
-import models.enumerations.Category;
-import models.exceptions.BookNotFoundException;
+import com.example.booklibrary.models.Book;
+import com.example.booklibrary.models.dto.BookDto;
+import com.example.booklibrary.models.enumerations.Category;
+import com.example.booklibrary.models.exceptions.BookNotFoundException;
 
 import java.util.List;
 import java.util.Optional;

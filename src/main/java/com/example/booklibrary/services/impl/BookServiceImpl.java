@@ -1,16 +1,16 @@
-package services.impl;
+package com.example.booklibrary.services.impl;
 
+import com.example.booklibrary.models.Author;
+import com.example.booklibrary.models.Book;
+import com.example.booklibrary.repositories.AuthorRepository;
 import jakarta.transaction.Transactional;
-import models.Author;
-import models.Book;
-import models.dto.BookDto;
-import models.enumerations.Category;
-import models.exceptions.AuthorNotFoundException;
-import models.exceptions.BookNotFoundException;
+import com.example.booklibrary.models.dto.BookDto;
+import com.example.booklibrary.models.enumerations.Category;
+import com.example.booklibrary.models.exceptions.AuthorNotFoundException;
+import com.example.booklibrary.models.exceptions.BookNotFoundException;
 import org.springframework.stereotype.Service;
-import repositories.AuthorRepository;
-import repositories.BookRepository;
-import services.BookService;
+import com.example.booklibrary.repositories.BookRepository;
+import com.example.booklibrary.services.BookService;
 
 import java.util.List;
 import java.util.Optional;

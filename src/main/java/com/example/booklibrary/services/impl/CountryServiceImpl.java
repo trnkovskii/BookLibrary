@@ -1,9 +1,9 @@
-package services.impl;
+package com.example.booklibrary.services.impl;
 
-import models.Country;
+import com.example.booklibrary.models.Country;
 import org.springframework.stereotype.Service;
-import repositories.CountryRepository;
-import services.CountryService;
+import com.example.booklibrary.repositories.CountryRepository;
+import com.example.booklibrary.services.CountryService;
 
 import java.util.List;
 import java.util.Optional;

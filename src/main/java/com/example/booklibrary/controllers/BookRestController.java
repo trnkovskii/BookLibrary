@@ -1,10 +1,10 @@
-package controllers;
+package com.example.booklibrary.controllers;
 
-import models.Book;
-import models.dto.BookDto;
+import com.example.booklibrary.models.Book;
+import com.example.booklibrary.models.dto.BookDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import services.BookService;
+import com.example.booklibrary.services.BookService;
 
 import java.util.List;
 

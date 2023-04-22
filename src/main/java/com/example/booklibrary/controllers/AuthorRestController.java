@@ -1,10 +1,10 @@
-package controllers;
+package com.example.booklibrary.controllers;
 
-import models.Author;
+import com.example.booklibrary.models.Author;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import services.AuthorService;
+import com.example.booklibrary.services.AuthorService;
 
 import java.util.List;
 

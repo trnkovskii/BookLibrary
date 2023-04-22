@@ -1,8 +1,8 @@
-package models.dto;
+package com.example.booklibrary.models.dto;
 
 
 import lombok.Data;
-import models.enumerations.Category;
+import com.example.booklibrary.models.enumerations.Category;
 
 @Data
 public class BookDto {

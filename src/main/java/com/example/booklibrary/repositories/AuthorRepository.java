@@ -1,7 +1,7 @@
-package repositories;
+package com.example.booklibrary.repositories;
 
-import models.Author;
-import models.Book;
+import com.example.booklibrary.models.Author;
+import com.example.booklibrary.models.Book;
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

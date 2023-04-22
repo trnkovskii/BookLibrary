@@ -1,4 +1,4 @@
-package models;
+package com.example.booklibrary.models;
 
 import jakarta.persistence.*;
 import lombok.Data;

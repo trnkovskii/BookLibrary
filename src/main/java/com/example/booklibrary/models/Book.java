@@ -1,8 +1,8 @@
-package models;
+package com.example.booklibrary.models;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import models.enumerations.Category;
+import com.example.booklibrary.models.enumerations.Category;
 
 @Data
 @Entity

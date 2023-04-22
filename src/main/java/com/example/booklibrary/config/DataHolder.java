@@ -1,14 +1,14 @@
-package config;
+package com.example.booklibrary.config;
 
+import com.example.booklibrary.models.Book;
 import jakarta.annotation.PostConstruct;
-import models.Author;
-import models.Book;
-import models.Country;
-import models.enumerations.Category;
+import com.example.booklibrary.models.Author;
+import com.example.booklibrary.models.Country;
+import com.example.booklibrary.models.enumerations.Category;
 import org.springframework.stereotype.Component;
-import services.AuthorService;
-import services.BookService;
-import services.CountryService;
+import com.example.booklibrary.services.AuthorService;
+import com.example.booklibrary.services.BookService;
+import com.example.booklibrary.services.CountryService;
 
 import java.util.List;
 
