@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 function BookItem(props) {
     return (
@@ -13,15 +12,11 @@ function BookItem(props) {
                 <a title={"Delete"} className={"btn btn-danger"} onClick={() => props.onDelete(props.book.id)}>
                     Delete
                 </a>
-                <Link className={"btn btn-info ml-2"}
-                    onClick={() => props.onEdit(props.book.id)}
-                    to={`/books/${props.book.id}/edit`}>
-                    Edit
-                </Link>
-                <Link className={"btn btn-success ml-2"}
-                    onClick={() => props.markAsTaken(props.book.id)}>
-                    Mark As Taken
-                </Link>
+                <a onClick={() => props.onEdit(props.book.id)}
+                    className={"btn btn-info ml-2"} href={`/books/${props.book.id}/edit`}>Edit</a>
+
+                <a onClick={() => props.markAsTaken(props.book.id)}
+                    className={"btn btn-success ml-2"} > Mark As Taken</a>
             </td>
         </tr>
     )

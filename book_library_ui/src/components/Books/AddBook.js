@@ -36,7 +36,9 @@ function AddBook(props) {
     const author = formData.author;
 
     props.onAddBook(name, category, availableCopies, author);
+    alert("Book Added!");
     history.push("/books");
+    window.location.reload()
   }
 
   return (

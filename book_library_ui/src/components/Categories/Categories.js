@@ -1,8 +1,9 @@
 import React from "react";
+import "./Categories.css"; 
 
 const Categories = () => {
   return (
-    <ul>
+    <ul className="categories">
       <li>NOVEL</li>
       <li>THRILER</li>
       <li>HISTORY</li>

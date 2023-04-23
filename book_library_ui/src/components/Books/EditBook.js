@@ -15,6 +15,7 @@ function EditBook(props) {
 
   const history = useHistory();
   const [formData, updateFormData] = React.useState({
+    id: '',
     name: '',
     category: 0,
     availableCopies: 0,
@@ -34,7 +35,6 @@ function EditBook(props) {
     const category = formData.category !== "" ? formData.category : props.book.category;
     const availableCopies = formData.availableCopies !== 0 ? formData.availableCopies : props.book.availableCopies;
     const author = formData.author !== 0 ? formData.author : props.book.author;
-
     props.onEditBook(props.book.id, name, category, availableCopies, author);
     history.push("/books");
   }

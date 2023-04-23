@@ -1,7 +1,7 @@
 import React from "react";
 import BookItem from './BookItem'
-import { Link } from 'react-router-dom';
 import ReactPaginate from 'react-paginate';
+import "../Books/Books.css";
 
 class Books extends React.Component {
 
@@ -31,6 +31,7 @@ class Books extends React.Component {
                   <th scope={"col"}>Category</th>
                   <th scope={"col"}>Author</th>
                   <th scope={"col"}>Available Copies</th>
+                  <th scope={"col"}>Actions</th>
                 </tr>
               </thead>
               <tbody>
@@ -42,12 +43,12 @@ class Books extends React.Component {
         <div className="col mb-3">
           <div className="row">
             <div className="col-sm-12 col-md-12">
-              <Link className={"btn btn-block btn-dark"} to={"/books/add"}>Add new book</Link>
+              <a className={"btn btn-block btn-dark"} href={"/books/add"}>Add new book</a>
             </div>
           </div>
         </div>
-        <ReactPaginate previousLabel={"back"}
-          nextLabel={"next"}
+        <ReactPaginate previousLabel={"Back"}
+          nextLabel={"Next"}
           breakLabel={<a href="/#">...</a>}
           breakClassName={"break-me"}
           pageClassName={"ml-1"}
@@ -57,12 +58,15 @@ class Books extends React.Component {
           onPageChange={this.handlePageClick}
           containerClassName={"pagination m-4 justify-content-center"}
           activeClassName={"active"} />
-
       </div>
     );
   }
 
   getBooksPage = (offset, nextPageOffset) => {
+    if (!this.props.books || !Array.isArray(this.props.books)) {
+      return null;
+    }
+
     return this.props.books.filter((book, index) => {
       return index >= offset && index < nextPageOffset;
     }).map(book => {
