@@ -1,5 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 
 function EditBook(props) {
 
@@ -14,6 +15,7 @@ function EditBook(props) {
   ]
 
   const history = useHistory();
+  const id = useParams();
   const [formData, updateFormData] = React.useState({
     id: '',
     name: '',
@@ -35,8 +37,9 @@ function EditBook(props) {
     const category = formData.category !== "" ? formData.category : props.book.category;
     const availableCopies = formData.availableCopies !== 0 ? formData.availableCopies : props.book.availableCopies;
     const author = formData.author !== 0 ? formData.author : props.book.author;
-    props.onEditBook(props.book.id, name, category, availableCopies, author);
+    props.onEditBook(id, name, category, availableCopies, author);
     history.push("/books");
+    window.location.reload();
   }
 
   return (

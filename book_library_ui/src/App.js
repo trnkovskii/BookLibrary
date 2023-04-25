@@ -27,11 +27,11 @@ class App extends Component {
         <main>
           <div className="container">
             <Switch>
-              <Route path="/books/add" exact render={() => <AddBook books={this.state.books} authors={this.state.authors}  onAddBook={this.addBook} />} />
+              <Route path="/books/add" exact render={() => <AddBook books={this.state.books} authors={this.state.authors} onAddBook={this.addBook} />} />
               <Route path="/books/:id/edit" exact render={() => <EditBook book={this.state.selectedBook} authors={this.state.authors} onEditBook={this.editBook} />} />
-              <Route path="/books" exact render={() => <Books books={this.state.books} onDelete={this.deleteBook} onEdit={this.getBook} />} />
+              <Route path="/books" exact render={() => <Books books={this.state.books} onDelete={this.deleteBook} onEdit={this.getBook} markAsTaken={this.markAsTaken} />} />
               <Route path="/categories" exact render={() => <Categories />} />
-              <Route path="/" exact render={() => <Books books={this.state.books} onDelete={this.deleteBook} onEdit={this.getBook} />} />
+              <Route path="/" exact render={() => <Books books={this.state.books} onDelete={this.deleteBook} onEdit={this.getBook} markAsTaken={this.markAsTaken} />} />
             </Switch>
           </div>
         </main>
@@ -70,7 +70,7 @@ class App extends Component {
   }
 
   addBook = (name, category, availableCopies, author) => {
-    const book = { name: name, category: category, availableCopies: availableCopies, author:author};
+    const book = { name: name, category: category, availableCopies: availableCopies, author: author };
     apiService.saveBook(book)
       .then(() => {
         this.loadBooks();
@@ -87,11 +87,11 @@ class App extends Component {
   }
 
   editBook = (id, name, category, availableCopies, author) => {
-    const book = { id: id, name: name, category: category, availableCopies: availableCopies, author:author};
-    apiService.editBook(id, book)
+    const book = { name: name, category: category, availableCopies: availableCopies, author: author };
+    apiService.saveBook(book)
       .then(() => {
         this.loadBooks();
-      })
+      });
   }
 
   markAsTaken = (id) => {

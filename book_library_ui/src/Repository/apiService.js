@@ -24,8 +24,8 @@ const ApiService = {
   },  
   
   editBook: async (id, bookDto) => {  
-    const response = await axios.put(`${BASE_URL}/books/${id}`, bookDto);  
-    return response.data;  
+    await this.deleteBookById(id);
+    await this.saveBook(bookDto);
   },  
   
   deleteBookById: async (id) => {  

@@ -42,7 +42,7 @@ public class DataHolder {
         this.bookService.save(new Book("Book1", Category.BIOGRAPHY,2,author.get(0)));
         this.bookService.save(new Book("Book2", Category.BIOGRAPHY,3,author.get(1)));
         this.bookService.save(new Book("Book3", Category.BIOGRAPHY,1,author.get(2)));
-        
+
         this.bookService.save(new Book("Book4", Category.DRAMA,2,author.get(0)));
         this.bookService.save(new Book("Book5", Category.THRILLER,3,author.get(1)));
         this.bookService.save(new Book("Book6", Category.DRAMA,1,author.get(2)));

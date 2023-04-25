@@ -9,3 +9,6 @@
     color: white; /* Change the text color on hover */
   }
   
+  button#submit {
+    margin-top: 20px;
+}

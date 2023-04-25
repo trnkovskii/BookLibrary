@@ -63,3 +63,7 @@ a.btn.btn-danger {
 a.btn.btn-info.ml-2 {
   margin-right: 10px;
 }
+
+button#submit {
+  margin-top: 20px;
+}

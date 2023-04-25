@@ -15,6 +15,7 @@ function AddBook(props) {
 
   const history = useHistory();
   const [formData, updateFormData] = React.useState({
+    id: '',
     name: '',
     category: 0,
     availableCopies: 0,
